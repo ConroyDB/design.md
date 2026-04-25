@@ -1,81 +1,116 @@
 ---
-name: Sovereign — Conroy Browne International
+name: Sovereign FMDA — Conroy Browne International
 colors:
-  # Signal — Ultramarine (the knife that cuts the noise). Used sparingly.
-  signal: "#1034A6"
-  signal-deep: "#0A2378"
-  signal-soft: "#3556C4"
-  on-signal: "#F4EFE6"
-  # Authority — Broken Gold (oxidised metal, never shiny). Rails, ornaments, numerals.
-  authority: "#A8894A"
-  authority-deep: "#7A6232"
-  authority-tint: "#C9AC73"
-  on-authority: "#1A1613"
-  # Surface — Parchment (the void / Ma). 70% of any composition.
-  surface: "#F4EFE6"
-  surface-warm: "#EDE6D8"
-  surface-dim: "#E4DCC9"
-  surface-shadow: "#D9CFB8"
-  # Ink — Graphite. Body text, station markers, structural lines.
-  ink: "#1A1613"
-  ink-soft: "#3A332C"
-  ink-mute: "#6B6058"
-  ink-quiet: "#9A8F84"
-  # Edge — Hairline rules. Never heavy.
-  hairline: "#1A1613"
-  hairline-soft: "#6B6058"
-  # Semantic — used only when functional, never decorative
-  alert: "#7A2418"
+  # ──────────────────────────────────────────────────────────────
+  # SPEC ALIASES (canonical agent-readable keys)
+  # ──────────────────────────────────────────────────────────────
+  primary: "#1034A6"          # → signal (Ultramarine)
+  secondary: "#4A2418"        # → mahogany (Dark Academia leather)
+  tertiary: "#2E4F3E"         # → library-green (Caribbean-colonial)
+  neutral: "#F4EFE6"          # → parchment
+
+  # ──────────────────────────────────────────────────────────────
+  # 1 · CARIBBEAN-BRONX SIGNAL — one Ultramarine, no fade.
+  # ──────────────────────────────────────────────────────────────
+  signal: "#1034A6"           # Ultramarine Blue. The signal that cuts.
+  signal-deep: "#0A2378"      # Hover/active state for primary CTAs only.
+  on-signal: "#F4EFE6"        # Parchment text on Ultramarine fill.
+
+  # ──────────────────────────────────────────────────────────────
+  # 2 · DARK ACADEMIA — the library palette. Leather, ink, oxblood.
+  # ──────────────────────────────────────────────────────────────
+  mahogany: "#4A2418"         # Library-leather. Testimonial borders, case-file blocks.
+  oxblood: "#6B1F1B"          # Editorial accent for serious, stamped artefacts.
+  library-green: "#2E4F3E"    # Penguin Classic / billiard-cloth green. Evidence blocks.
+  library-green-soft: "#3F6151"
+
+  # ──────────────────────────────────────────────────────────────
+  # 3 · JAPANESE RESTRAINT — sumi ink, vermilion seal, paper.
+  # ──────────────────────────────────────────────────────────────
+  sumi: "#1A1613"             # Sumi-e ink. Body text. Slight warm-black.
+  charcoal: "#3A332C"         # Secondary body, captions.
+  stone: "#6B6058"            # Tertiary text, metadata, hairlines.
+  ash: "#9A8F84"              # Quiet metadata, disabled states, axis labels.
+  vermilion: "#B83A24"        # The hanko seal. One per artefact, never more.
+  on-vermilion: "#F4EFE6"
+
+  # ──────────────────────────────────────────────────────────────
+  # 4 · MA SURFACES — parchment, bone, tea-stained.
+  # ──────────────────────────────────────────────────────────────
+  parchment: "#F4EFE6"        # The void. 70% of any composition.
+  bone: "#FAF6EC"             # Palest paper. Elevated surfaces.
+  tea-stained: "#EDE6D8"      # Testimonial fills, secondary panels.
+
+  # ──────────────────────────────────────────────────────────────
+  # 5 · METAL — gold and brass do separate jobs. Never interchange.
+  # ──────────────────────────────────────────────────────────────
+  broken-gold: "#A8894A"      # Roman numerals + corner ornaments. THAT'S IT.
+  brass: "#877152"            # Cooler, structural. Rails (Life GPS), structural borders.
+
+  # ──────────────────────────────────────────────────────────────
+  # 6 · ALERT — calm authority. No yellow, orange, or fire-red.
+  # ──────────────────────────────────────────────────────────────
+  alert: "#6B1F1B"
   on-alert: "#F4EFE6"
-  # Forbidden roles — explicit so agents never invent them
-  # No purple. No teal. No pastel. No gradient fills.
 typography:
   display-xl:
-    fontFamily: Cormorant Garamond
+    fontFamily: Bodoni Moda
     fontSize: 84px
     fontWeight: "500"
     lineHeight: 88px
     letterSpacing: -0.02em
   display-lg:
-    fontFamily: Cormorant Garamond
+    fontFamily: Bodoni Moda
     fontSize: 56px
     fontWeight: "500"
     lineHeight: 60px
     letterSpacing: -0.015em
   signal-line:
-    fontFamily: Cormorant Garamond
+    fontFamily: Bodoni Moda
     fontSize: 40px
     fontWeight: "600"
     lineHeight: 48px
     letterSpacing: -0.01em
     fontStyle: italic
   headline-md:
-    fontFamily: Cormorant Garamond
+    fontFamily: Bodoni Moda
     fontSize: 32px
     fontWeight: "500"
     lineHeight: 40px
   headline-sm:
-    fontFamily: Cormorant Garamond
+    fontFamily: Bodoni Moda
     fontSize: 24px
     fontWeight: "500"
     lineHeight: 32px
   body-lg:
-    fontFamily: EB Garamond
+    fontFamily: Montserrat
     fontSize: 19px
     fontWeight: "400"
     lineHeight: 30px
+  body-lg-italic:
+    fontFamily: Montserrat
+    fontSize: 19px
+    fontWeight: "400"
+    lineHeight: 30px
+    fontStyle: italic
   body-md:
-    fontFamily: EB Garamond
+    fontFamily: Montserrat
     fontSize: 17px
     fontWeight: "400"
     lineHeight: 28px
   body-sm:
-    fontFamily: EB Garamond
+    fontFamily: Montserrat
     fontSize: 15px
     fontWeight: "400"
     lineHeight: 24px
+  caption:
+    fontFamily: Montserrat
+    fontSize: 14px
+    fontWeight: "400"
+    lineHeight: 22px
+    fontStyle: italic
   small-caps:
-    fontFamily: EB Garamond
+    fontFamily: Montserrat
     fontSize: 13px
     fontWeight: "600"
     lineHeight: 18px
@@ -94,7 +129,7 @@ typography:
     lineHeight: 26px
     letterSpacing: 0.01em
   numeral-roman:
-    fontFamily: Cormorant Garamond
+    fontFamily: Bodoni Moda
     fontSize: 28px
     fontWeight: "500"
     lineHeight: 32px
@@ -102,7 +137,6 @@ typography:
 rounded:
   none: 0px
   hairline: 1px
-  sm: 2px
   DEFAULT: 0px
   full: 9999px
 spacing:
@@ -116,217 +150,337 @@ spacing:
   void-min: 96px
 components:
   page:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.ink}"
+    backgroundColor: "{colors.parchment}"
+    textColor: "{colors.sumi}"
     typography: "{typography.body-md}"
     padding: "{spacing.page-margin}"
+  page-elevated:
+    backgroundColor: "{colors.bone}"
+    textColor: "{colors.sumi}"
+    typography: "{typography.body-md}"
+    padding: "{spacing.card-padding}"
   signal-banner:
-    backgroundColor: transparent
+    backgroundColor: "{colors.parchment}"
     textColor: "{colors.signal}"
     typography: "{typography.signal-line}"
-    borderTop: "1px solid {colors.hairline}"
-    borderBottom: "1px solid {colors.hairline}"
-    paddingY: 32px
+    padding: "32px 0"
+  signal-banner-rule:
+    backgroundColor: "{colors.sumi}"
+    height: 1px
   station-marker:
-    backgroundColor: "{colors.surface}"
-    border: "1.5px solid {colors.ink}"
+    backgroundColor: "{colors.parchment}"
+    width: 14px
+    height: 14px
     rounded: "{rounded.full}"
-    diameter: 14px
   station-marker-target:
     backgroundColor: "{colors.signal}"
-    border: "1.5px solid {colors.signal-deep}"
+    width: 18px
+    height: 18px
     rounded: "{rounded.full}"
-    diameter: 18px
   rail-friction:
-    strokeColor: "{colors.ink}"
-    strokeWidth: 1px
+    backgroundColor: "{colors.sumi}"
+    height: 1px
   rail-life-gps:
-    strokeColor: "{colors.authority}"
-    strokeWidth: 1.5px
-    strokeDasharray: "6 6"
+    backgroundColor: "{colors.brass}"
+    height: 1px
   band-target:
     backgroundColor: "{colors.signal}"
     textColor: "{colors.on-signal}"
     typography: "{typography.small-caps}"
-    paddingX: 12px
-    paddingY: 4px
+    padding: "4px 12px"
   anchor-card:
-    backgroundColor: "{colors.surface}"
-    borderTop: "1px solid {colors.hairline-soft}"
+    backgroundColor: "{colors.parchment}"
+    textColor: "{colors.sumi}"
+    typography: "{typography.body-md}"
     padding: "{spacing.card-padding}"
-    numeralColor: "{colors.authority}"
-    headingColor: "{colors.ink}"
-    parallelColor: "{colors.signal}"
+  anchor-card-rule:
+    backgroundColor: "{colors.stone}"
+    height: 1px
+  anchor-card-numeral:
+    backgroundColor: "{colors.parchment}"
+    textColor: "{colors.broken-gold}"
+    typography: "{typography.numeral-roman}"
+  anchor-card-heading:
+    backgroundColor: "{colors.parchment}"
+    textColor: "{colors.sumi}"
+    typography: "{typography.small-caps}"
+  anchor-card-claim:
+    backgroundColor: "{colors.parchment}"
+    textColor: "{colors.charcoal}"
+    typography: "{typography.body-md}"
+  anchor-card-parallel:
+    backgroundColor: "{colors.parchment}"
+    textColor: "{colors.signal}"
+    typography: "{typography.body-md}"
   colophon:
-    backgroundColor: "{colors.surface}"
-    border: "1px solid {colors.authority}"
-    cornerOrnament: "{colors.authority}"
+    backgroundColor: "{colors.parchment}"
+    textColor: "{colors.sumi}"
     typography: "{typography.data-mono}"
     padding: "{spacing.card-padding}"
+  colophon-frame:
+    backgroundColor: "{colors.sumi}"
+    height: 1px
+  colophon-ornament:
+    backgroundColor: "{colors.broken-gold}"
+    width: 12px
+    height: 12px
+  testimonial-block:
+    backgroundColor: "{colors.tea-stained}"
+    textColor: "{colors.sumi}"
+    typography: "{typography.body-lg-italic}"
+    padding: "24px 32px"
+  testimonial-rule:
+    backgroundColor: "{colors.mahogany}"
+    width: 2px
+  testimonial-attribution:
+    backgroundColor: "{colors.tea-stained}"
+    textColor: "{colors.charcoal}"
+    typography: "{typography.small-caps}"
+  evidence-block:
+    backgroundColor: "{colors.library-green}"
+    textColor: "{colors.parchment}"
+    typography: "{typography.body-md}"
+    padding: "{spacing.card-padding}"
+  evidence-heading:
+    backgroundColor: "{colors.library-green}"
+    textColor: "{colors.parchment}"
+    typography: "{typography.small-caps}"
+  metric-cell:
+    backgroundColor: "{colors.parchment}"
+    padding: "0"
+  metric-value:
+    backgroundColor: "{colors.parchment}"
+    textColor: "{colors.sumi}"
+    typography: "{typography.data-mono-lg}"
+  metric-label:
+    backgroundColor: "{colors.parchment}"
+    textColor: "{colors.ash}"
+    typography: "{typography.small-caps}"
+  pricing-anchor:
+    backgroundColor: "{colors.parchment}"
+    textColor: "{colors.sumi}"
+    typography: "{typography.display-lg}"
+  pricing-tier:
+    backgroundColor: "{colors.parchment}"
+    textColor: "{colors.charcoal}"
+    typography: "{typography.small-caps}"
   cta-primary:
     backgroundColor: "{colors.signal}"
     textColor: "{colors.on-signal}"
     typography: "{typography.small-caps}"
     rounded: "{rounded.none}"
     height: 56px
-    paddingX: 32px
-    border: "none"
+    padding: "0 32px"
   cta-primary-hover:
     backgroundColor: "{colors.signal-deep}"
+    textColor: "{colors.on-signal}"
+    typography: "{typography.small-caps}"
   cta-ghost:
-    backgroundColor: transparent
-    textColor: "{colors.ink}"
+    backgroundColor: "{colors.parchment}"
+    textColor: "{colors.sumi}"
     typography: "{typography.small-caps}"
     rounded: "{rounded.none}"
     height: 56px
-    paddingX: 32px
-    border: "1px solid {colors.ink}"
-  cta-ghost-hover:
-    backgroundColor: "{colors.surface-warm}"
-  pricing-anchor:
-    backgroundColor: transparent
-    textColor: "{colors.ink}"
-    typography: "{typography.display-lg}"
-    accentColor: "{colors.signal}"
-    note: "$1,500 is the anchor. Render it large, never crossed-out, never with a 'discount' badge."
-  testimonial-block:
-    backgroundColor: "{colors.surface-warm}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-lg}"
-    borderLeft: "2px solid {colors.authority}"
-    paddingX: 32px
-    paddingY: 24px
-    quoteFontStyle: italic
-  metric-cell:
-    backgroundColor: transparent
-    valueColor: "{colors.ink}"
-    valueTypography: "{typography.data-mono-lg}"
-    labelColor: "{colors.ink-mute}"
-    labelTypography: "{typography.small-caps}"
-  hairline-rule:
-    backgroundColor: "{colors.hairline}"
+    padding: "0 32px"
+  cta-ghost-rule:
+    backgroundColor: "{colors.sumi}"
     height: 1px
-  ornament-corner:
-    color: "{colors.authority}"
-    note: "Two short orthogonal strokes (12px × 12px). Bauhaus-derived. Used only on colophon and proof blocks."
+  seal:
+    backgroundColor: "{colors.vermilion}"
+    textColor: "{colors.on-vermilion}"
+    typography: "{typography.small-caps}"
+    width: 64px
+    height: 64px
+    padding: "8px"
+  alert-banner:
+    backgroundColor: "{colors.alert}"
+    textColor: "{colors.on-alert}"
+    typography: "{typography.small-caps}"
+    padding: "12px 24px"
+  hairline-primary:
+    backgroundColor: "{colors.sumi}"
+    height: 1px
+  hairline-soft:
+    backgroundColor: "{colors.stone}"
+    height: 1px
 ---
 
 ## Overview
 
-**Sovereign — Conroy Browne International.**
+**Sovereign FMDA — Feral Minimalist Dark Academia.**
 
-A *triangulated* visual identity. Three traditions held in one frame:
+A *triangulated* identity. Three traditions held in one frame.
 
-1. **Dark Academia** — the intellectual weight of a 63-million-word client corpus. The archive *is* the brand. Typography of monographs, not marketing.
-2. **Japanese Minimalism (Ma)** — nothingness as a physical material. 70% of any composition is unoccupied. The pause does the work the words can't.
-3. **Caribbean-Bronx heritage** — *Sovereign Grit*. Ultramarine Blue (the Signal) and Broken Gold (the Authority). Unhurried certainty. Never salesy urgency. Warmth that has nothing to prove.
+1. **Dark Academia.** Library leather, sumi ink, oxblood, mahogany, Penguin-Classic green. The intellectual weight of a 63-million-word corpus. Typography of monographs. Surfaces of bound books.
+2. **Japanese Ma & restraint.** Negative space as material. Sumi-e black. The vermilion *hanko* seal — one chop per artefact. *Wabi-sabi* as integrity, not as kitsch.
+3. **Caribbean-Bronx heritage.** *Sovereign Grit.* Ultramarine blue (Barbados) cuts through everything. Broken Gold honours the breakage. Warmth that has nothing to prove.
 
-The aesthetic is **editorial, surgical, and feral** — a 1920s scientific monograph crossed with a Swiss railway diagram. The brand personality is *sovereign* — the bearing of someone who knows exactly who they are and doesn't need you to agree.
-
-CBI helps high-performers eliminate invisible friction that has kept them stuck despite doing everything right. The visual identity must read the same way: *precise, earned, unforgettable.* Not because it shouts — because it cuts.
+The aesthetic target is *evidence, beautifully presented* — the way a forensic report would look if designed by someone who cared about craft. Or a long-form *Atlantic* feature on a scientific breakthrough, where the design serves the weight of the information.
 
 > "Friction is the tax you pay to stay. The Neutralizer ends the tax."
 
-If a piece of CBI design could come from any premium wellness brand, it has failed. CBI design only sounds like Conroy.
+If a piece of CBI design could come from any premium wellness brand, it has failed. Sovereign FMDA only sounds like Conroy.
+
+## Foundation
+
+Four compositional disciplines that every CBI artefact must satisfy *before* it ships. The principles are universal; the materials are ours. Each foundation routes through the **signature lockup** (Ultramarine + Broken Gold) first, then draws on the expanded palette for its specific job.
+
+1. **Backdrop chosen with intent.**
+   The default backdrop is **parchment** (`#F4EFE6`) — the canvas for every editorial artefact. When gravity is required, the backdrop extends to **library-green** (`#2E4F3E`) for evidence blocks, **mahogany** (`#4A2418`) for case-file panels, or **bone** (`#FAF6EC`) for elevated surfaces. Never neutral grey. Never clinical white. Never "we'll figure out the background later." The decision *is* the design.
+
+2. **One focal point — always Ultramarine.**
+   The signal banner is the focal point. Ultramarine (`#1034A6`) at the top of every artefact, italic on the second clause, bracketed by sumi hairlines. There can only be one. A second focal point in Ultramarine breaks the system. (A *secondary* mark is allowed — a single vermilion *hanko* seal for archival pieces — but it serves the focal point, never competes with it.)
+
+3. **Material consistency — two faces (and one for data).**
+   **Bodoni Moda** (display + headlines + signal lines + Roman numerals) — high-contrast neoclassical serif, the Italian Vogue / Penguin Classics / Tiffany register. **Montserrat** (body + small-caps + captions) — geometric sans, the calm working voice. **IBM Plex Mono** is the third face but is reserved exclusively for data, colophons, and the corpus signature — never prose. No fourth face. No rounded corners. No gradients. No drop shadows. The discipline is the brand.
+
+4. **Visual weight distributed asymmetrically.**
+   Signal at the top. Colophon at the bottom-right, framed with Broken Gold corner ornaments. Attribution at the bottom-left. Centring is the death of editorial weight. The corners do the work; the middle holds the void.
+
+The signature lockup — **parchment + Ultramarine signal + Broken Gold colophon ornaments** — must appear on every artefact. The expanded palette (mahogany, library-green, vermilion, brass, bone, tea-stained, the four ink levels) extends the trunk into specific roles: testimonials, evidence, alerts, archival seals. The expansion never replaces the lockup. It serves it.
 
 ## Colors
 
-The palette is **two signals against a void.** Ultramarine Blue is the knife — it appears only where the eye must go. Broken Gold is the rail — oxidised, matte, never metallic. The parchment surface holds everything in restraint.
+The palette is built on a **signature lockup** — Ultramarine + Broken Gold + parchment — that appears on every artefact. From that trunk, five families branch out, each from a defined tradition, each with a single job. *Is it meant?* — for every token below, the answer is yes.
 
-- **Signal — Ultramarine `#1034A6`** — *The Signal.* The clear channel cutting through noise. Used for: the one signal sentence, the target friction band (2–3 on the Friction Scale), the CBI parallels under each clinical anchor, primary CTAs. It should be *impossible to look away from* — not because it's loud, because it's precise. Never used as a fill across more than 12% of a composition.
-- **Authority — Broken Gold `#A8894A`** — *The Authority.* Oxidised metal. Worn-in. Earned. Used for: the Life GPS rail (always dashed), Roman numerals on framework anchors, corner ornaments on colophons and proof blocks, hairline borders on testimonial blocks. **Never shiny. Never metallic. Never a gradient.** If it could pass for jewellery, it's wrong.
-- **Surface — Parchment `#F4EFE6`** — *The Void.* Warmer than off-white. Carries a subtle paper grain (SVG noise filter) that disables in `@media print`. This is the Ma. 70% of any layout sits here untouched.
-- **Ink — Graphite `#1A1613`** — Body text, station markers, structural lines. Never pure black. The slight warmth keeps it on the same continuum as the parchment.
-- **Hairline — `#1A1613` at 1px** — Section dividers, table rules, frame edges. Always 1px. Heavier weights belong to a different brand.
+### 1 · Caribbean-Bronx Signal
 
-**Forbidden moves:** purple gradients, teal accents, pastel anything, drop shadows that aren't hairline, glow effects, the "ultramarine fading to white" gradient (Ultramarine is a knife, not a fade), gold that looks like it could be plated.
+The single high-frequency channel. Used where the eye must go.
 
-**WCAG:** Ink on Parchment = 14.1:1 (AAA). Ultramarine on Parchment = 8.7:1 (AAA). On-Signal on Ultramarine = 11.5:1 (AAA). Authority on Parchment = 4.6:1 (AA — never use Authority for body text, only structural/decorative roles).
+- **`signal` `#1034A6`** — Ultramarine Blue (Barbados). The signal sentence. The target friction band. The CBI parallels under the framework anchors. Primary CTAs. Never used as a fill across more than 12% of a composition. Never gradient. Ultramarine is a knife.
+- **`signal-deep` `#0A2378`** — hover/active state on primary CTAs only.
+
+### 2 · Dark Academia — The Library
+
+Library leather, oxblood, billiard-cloth green. The aesthetic of *bound books and forensic case files.* These are the colours the previous DESIGN.md was missing.
+
+- **`mahogany` `#4A2418`** — library-leather. Border on testimonial blocks. Frame on serious case studies. Where Broken Gold would be too ornamental, Mahogany carries the weight.
+- **`oxblood` `#6B1F1B`** — editorial accent for stamped, archival artefacts. Also: alert.
+- **`library-green` `#2E4F3E`** — Penguin Classic / billiard cloth. Surface of evidence blocks (corpus stats, LMFT validations, clinical citations). The third Dark Academia surface. **This is not wellness sage.** Wellness sage is light, washed-out, calming. Library green is deep, saturated, bound.
+- **`library-green-soft` `#3F6151`** — lower-contrast tint for evidence-block accents.
+
+### 3 · Japanese Restraint — Sumi & Hanko
+
+Multiple ink levels for typographic hierarchy. The vermilion seal as the only "stop" colour.
+
+- **`sumi` `#1A1613`** — sumi-e ink. Body text on parchment. Never pure black; warmer.
+- **`charcoal` `#3A332C`** — secondary text. Long-form prose where pure sumi would be too heavy.
+- **`stone` `#6B6058`** — tertiary text, metadata, hairlines.
+- **`ash` `#9A8F84`** — quietest text level. Metric labels, disabled states, axis numerals.
+- **`vermilion` `#B83A24`** — the *hanko* seal. The Japanese accent that is not gold. Used **once per artefact, maximum.** A verified-mark on a case file. A seal under a quote. Never on body text. Never on a CTA. Never as a fill across more than 60×60 pixels.
+
+### 4 · Ma — Surfaces
+
+Three paper tones. Generosity of empty space is the brand signature.
+
+- **`parchment` `#F4EFE6`** — the void. 70% of any composition.
+- **`bone` `#FAF6EC`** — palest paper. Elevated surfaces only.
+- **`tea-stained` `#EDE6D8`** — slightly warmer cream. Testimonial fills, secondary panels.
+
+### 5 · Metal — Gold and Brass Are Different Jobs
+
+This is where the previous DESIGN.md failed. **Gold and Brass do not interchange.**
+
+- **`broken-gold` `#A8894A`** — oxidised, matte. **Reserved exclusively for: Roman numerals on framework anchors, and Bauhaus corner ornaments on the colophon.** Two jobs. Nothing else. Never rails. Never borders. Never hover states. Reach for gold on a third surface — stop and pick something else.
+- **`brass` `#877152`** — cooler, structural, industrial. Used for: the Life GPS rail, secondary structural rules, occasional border accents on archival blocks. **Brass is engineering. Gold is ornament.** The distinction is what kept Bottega Veneta from looking like Versace.
+
+### 6 · Alert
+
+- **`alert` `#6B1F1B`** — oxblood. Same family as mahogany. **No yellow. No orange. No fire-engine red.** When CBI alerts, the alert is calm and authoritative — the colour of a library fire-extinguisher cabinet, not a smoke alarm.
+
+### Forbidden roles
+
+Wellness sage. Lavender. Sky blue. Mint. Coral. Peach. Rose-gold. Any pastel. Any gradient between two of these tokens (Ultramarine fading to Vermilion is *especially* forbidden — that's a Trump-rally palette). No emoji-yellow alerts. No SaaS purple. No "trust blue." No "safety green."
+
+### WCAG (parchment background)
+
+- `sumi` on parchment: 14.1:1 (AAA)
+- `charcoal` on parchment: 9.4:1 (AAA)
+- `stone` on parchment: 4.7:1 (AA — body OK at body-md+)
+- `ash` on parchment: 2.8:1 (decorative only)
+- `signal` on parchment: 8.7:1 (AAA)
+- `mahogany` on parchment: 11.2:1 (AAA)
+- `library-green` on parchment: 6.1:1 (AAA)
+- `vermilion` on parchment: 4.6:1 (AA decorative)
+- `broken-gold` on parchment: 3.4:1 (decorative only)
+- `brass` on parchment: 4.3:1 (decorative only)
+- `parchment` on `signal`: 8.7:1 (AAA)
+- `parchment` on `library-green`: 8.5:1 (AAA)
+- `parchment` on `mahogany`: 12.4:1 (AAA)
 
 ## Typography
 
-**Three faces, three jobs.** No exceptions.
+**Two faces. Two jobs. Plus one strictly-bounded face for data.**
 
-- **Cormorant Garamond** (display, headlines, signal lines, Roman numerals) — the high-contrast serif of an old-world monograph. Italic for the second clause of any signal line.
-- **EB Garamond** (body, testimonials, captions, small-caps) — the working serif. Holds long-form prose without fatigue.
-- **IBM Plex Mono** (data, metrics, colophons, the corpus signature) — the only sans-adjacent face. Reserved for numbers and evidence. Never for prose.
+- **Bodoni Moda** — display, headlines, signal lines, Roman numerals. High-contrast neoclassical serif. The register of *Italian Vogue*, Penguin Classics title pages, Tiffany & Co. catalogues. Italic for the second clause of any signal line. Bodoni's hairlines are the typographic equivalent of Ultramarine — they cut.
+- **Montserrat** — body, testimonials, captions, small-caps, CTAs. Geometric sans, the calm working voice. Holds long-form without fatigue. Multiple weights (400 body, 600 small-caps, 700 reserved for data labels).
+- **IBM Plex Mono** — data, metrics, colophons, the corpus signature. **Reserved for evidence only.** The mono lockup *is* the credential. Never used for prose. If a sentence is in mono, it is wrong.
 
-**Hierarchy:**
+The signal line is the largest object on any page. Body copy is generous (16–18px Montserrat at line-height ≥1.6). Small-caps with 0.18em tracking for section headers and metric labels. The pause between sentences is part of the sentence — paragraph spacing ≥1em is non-negotiable.
 
-- The signal line is the largest object on any page. It is the first thing the eye lands on and the last thing the reader carries away.
-- Body copy is *generous* — 17–19px, line-height ≥1.6. The reading experience is unhurried. Never cramped.
-- Small caps with 0.18em letter-spacing for section headers and metric labels — typographic restraint, never bold sans.
-- Data is monospaced. Metrics like *131 clients · 1,323 sessions · 63M words · 7 years* must render in `IBM Plex Mono`. The mono lockup *is* the credential.
+**Pairing principle.** Bodoni's high-contrast hairlines need Montserrat's even geometry to rest against — sharp serif headline, calm sans body. The contrast is the system. Inverting it (sans headline + serif body) breaks the brand.
 
-**The Ma rule for prose:**
-
-- Short sentences. Single-clause where possible.
-- Single-line paragraphs for anything that needs to land.
-- The pause between sentences is part of the sentence. Generous `paragraph-spacing` (≥1em) is non-negotiable.
-- Never fill space. Signal, then silence. Then signal again.
-
-**Forbidden faces:** Inter, Roboto, Arial, Helvetica, Open Sans, system-ui, Space Grotesk, anything Bootstrap defaults to. Generic AI aesthetics die here.
+**Forbidden:** Inter, Roboto, Helvetica, Arial, Open Sans, Space Grotesk, Poppins, Lato, Nunito, Source Sans, Work Sans, anything Bootstrap defaults to. Generic AI aesthetics die here.
 
 ## Layout
 
-**A grid built around the void.** Layout is composition, not container-stuffing.
+A grid built around the void. Layout is composition, not container-stuffing.
 
 - **Base unit:** 8px. All spacing is a multiple.
-- **Page margins:** ≥120px on desktop, ≥48px on mobile. The frame around the page is itself a design element.
-- **Void floor:** at least 70% of any viewport must be unoccupied parchment. If a comp is denser than that, strip elements until it isn't.
-- **Single column for prose.** Max line length 68 characters. Multi-column layouts are reserved for the six-anchor framework grid (3×2) and the colophon.
-- **Asymmetry over symmetry.** The corpus colophon belongs in the bottom-right corner, not centred. Attribution belongs in the bottom-left. Centring is the death of editorial weight.
-- **Diagonal flow on the journey rail.** Tourist → Operator → Sovereign reads left-to-right with the friction scale (20→0) running underneath as a numeric rail. The Life GPS rail runs *parallel above* in dashed Broken Gold.
-
-**Print:** every CBI artifact must include `@media print` that disables paper-grain filters, forces the parchment background, preserves Ultramarine and Broken Gold, and ensures hairlines render at ≥0.75pt. The same file must export cleanly to PDF for high-ticket conversations.
+- **Page margins:** ≥120px desktop, ≥48px mobile. The frame is itself a design element.
+- **Void floor:** at least 70% unoccupied parchment. If a comp is denser, strip until it isn't.
+- **Single column for prose.** Max line length 68 characters.
+- **Asymmetry over symmetry.** Colophon belongs bottom-right. Attribution belongs bottom-left. Centring is the death of editorial weight.
+- **Print spec.** Every artefact must include `@media print`: paper-grain disabled, parchment forced, Ultramarine and Mahogany preserved, hairlines ≥0.75pt.
 
 ## Elevation & Depth
 
-Depth in CBI is not built from shadows. It is built from **typographic weight, hairlines, and Ma.**
+Depth is built from **typography, hairlines, and Ma.** Never shadows.
 
-- **Level 1 — Surface.** Parchment with optional 4% noise filter. The base layer.
-- **Level 2 — Section.** Separated from Level 1 by a 1px hairline rule and ≥48px of vertical Ma. Never by a card with a drop shadow.
-- **Level 3 — Frame.** Used only for the corpus colophon and proof blocks. A 1px Broken Gold border with two corner ornaments (12px × 12px Bauhaus-derived strokes, top-left and bottom-right). This is the only "container" in the system.
-- **Level 4 — Signal.** Ultramarine fill. Reserved for the target friction band, primary CTAs, and inline signal lozenges. Functions as elevation by *contrast*, not stacking.
+- **L1 — Surface.** Parchment with optional 4% noise filter.
+- **L2 — Section.** 1px sumi hairline + ≥48px vertical Ma. Not a card. Not a shadow.
+- **L3 — Panel.** Tea-stained or library-green fill. Used for testimonials, evidence blocks, archival quotes. Always full-bleed within its column.
+- **L4 — Frame.** 1px sumi border + Bauhaus corner ornaments in Broken Gold. The colophon and proof-pack only.
+- **L5 — Signal.** Ultramarine fill. Reserved for target friction band, primary CTAs, signal lozenges. Functions as elevation by *contrast*, not stacking.
 
-**Forbidden:** drop shadows, glow effects, glassmorphism, neumorphism, parallax, layered transparency, anything that simulates physical depth through visual softness. CBI is an instrument panel, not a poster.
+**Forbidden:** drop shadows, glow, glassmorphism, neumorphism, parallax, layered transparency. CBI is an instrument panel.
 
 ## Shapes
 
-**Right angles. Hairlines. The full-circle station marker.**
+**Right angles. Hairlines. Full-circle station markers. Nothing else.**
 
-- **Cards and frames:** `rounded.none` (0px). Sharp corners are the default and the standard.
-- **Borders:** 1px hairline (`#1A1613`) for structural rules; 1.5px Broken Gold (`#A8894A`) for the Life GPS rail and colophon frame.
-- **Station markers** (only used on the journey rail): 14px concentric-stroke circles in graphite. The Sovereign station is haloed (18px) and slightly heavier — the destination, not just another stop.
-- **CTAs:** rectangular. No pill buttons. No rounded corners.
-- **Iconography:** avoided. Where unavoidable, use 1.5px line icons in graphite, never filled. *Never* lotus, sunset, flowing curves, sparkles, checkmarks, gradient orbs, or any wellness-stock vocabulary.
+- Cards and frames: `rounded.none` (0px). Sharp is default and standard.
+- Borders: 1px hairline (sumi) for structural rules; 1px brass for the Life GPS rail and archival panels; 2px mahogany for testimonial left-borders.
+- Station markers: 14px concentric-stroke circles in sumi (the journey rail's only round shape). The Sovereign station is haloed at 18px with an Ultramarine fill.
+- CTAs: rectangular. No pills.
+- Iconography: avoided. Where unavoidable, 1.5px line icons in sumi, never filled. **Never** lotus, sunset, flowing curves, sparkles, checkmarks, gradient orbs, hands raised to the sky.
 
 ## Components
 
 ### Signal Banner
 
-The single sentence that opens any composition. Top of the page, centred, Ultramarine, italic on the second clause. Bracketed by two 1px graphite hairlines (above and below). Reads in 10 seconds cold. The current canonical signal:
+The single sentence that opens any composition. Top of page. Centred. Ultramarine. Italic on the second clause. Bracketed by 1px sumi hairlines (above and below). Reads in 10 seconds cold.
 
 > *"Friction is the tax you pay to stay. The Neutralizer ends the tax."*
 
 ### Journey Rail
 
-Tourist → Operator → Sovereign. Three station markers connected by a 1px graphite rail. Friction Scale (20 down to 0) running beneath as a thin numbered axis. The target band (2–3) highlighted in solid Ultramarine. The Life GPS rail running parallel above in dashed Broken Gold. System tags ("THE NEUTRALIZER" between Tourist and Operator, "C.U.E. METHOD" between Operator and Sovereign) set in small caps above the rail.
+Tourist → Operator → Sovereign. Three station markers connected by a 1px sumi rail. Friction Scale (20→0) running beneath as a numbered axis. Target band (2–3) highlighted in solid Ultramarine. The Life GPS rail runs parallel above in dashed **brass** (not gold — gold is for ornaments). System tags ("THE NEUTRALIZER" / "C.U.E. METHOD") set in small-caps above the rail in sumi.
 
 ### Anchor Card (Six Clinical Anchors)
 
-Used in the 3×2 framework grid (van der Kolk · Maté · Levine · Porges · Sapolsky · Bargh). Each card carries:
+Used in the 3×2 framework grid. Each card carries:
 
-- A Roman numeral in Broken Gold (Cormorant Garamond, 28px)
-- The surname in small caps (graphite, 0.18em tracking)
-- A single-sentence claim in body-md italic
-- The CBI parallel in Ultramarine sans-style (still EB Garamond, but tightened) — exactly one line
+- A Roman numeral in **Broken Gold** (28px Cormorant Garamond)
+- The surname in small-caps sumi (0.18em tracking)
+- A single-sentence claim in body-md charcoal italic
+- The CBI parallel in Ultramarine — exactly one line
 
-Top border: 1px graphite hairline. No fill. No rounded corners.
+Top border: 1px stone hairline. No fill. No rounded corners. Numerals are the only place Broken Gold appears in this component.
 
-### Corpus Colophon
+### Colophon
 
-The proof block. Bottom-right of any page. Bauhaus corner ornaments in Broken Gold (top-left, bottom-right only). Contents in IBM Plex Mono:
+The proof block. Bottom-right of any page. 1px sumi frame. Bauhaus corner ornaments in **Broken Gold** at top-left and bottom-right corners only (12×12px). Contents in IBM Plex Mono:
 
 ```
 131 CLIENTS · 1,323 SESSIONS · 63M WORDS · 7 YEARS
@@ -334,78 +488,105 @@ The proof block. Bottom-right of any page. Bauhaus corner ornaments in Broken Go
 4+ LICENSED CLINICAL VALIDATORS
 ```
 
-Numbers are sacred. Never invent. Never round generously. Source of truth: `VERIFIED_METRICS.md`.
+Numbers are sacred. Source of truth: `VERIFIED_METRICS.md`.
 
 ### Testimonial Block
 
-Verbatim client quote. Background: parchment-warm (`#EDE6D8`). Left border: 2px Broken Gold. Quote set in body-lg italic. Attribution set in small-caps with credential where applicable (e.g., *"— Aline Inocencio, LMFT (20 years clinical practice)"*). **Quotes are never paraphrased, never cleaned up, never reordered.** If the corpus says it, the design renders it word-for-word. (See `memory/feedback_verbatim_quotes_sacred.md`.)
+Verbatim client quote. Background: tea-stained (`#EDE6D8`). Left border: 2px **mahogany** (library-leather, not gold). Quote in `body-lg-italic` sumi. Attribution in small-caps charcoal with credential where applicable.
+
+> *"20 years of therapy couldn't do what 90 minutes did."*
+> — ALINE INOCENCIO, LMFT (20 YEARS CLINICAL PRACTICE)
+
+**Quotes are never paraphrased, cleaned up, or reordered.** (See `memory/feedback_verbatim_quotes_sacred.md`.)
+
+### Evidence Block
+
+The third Dark Academia surface, and the place library-green earns its job. Used for: corpus statistics, clinical-validator credentials, peer-reviewed research callouts, case-file blocks. Background: `library-green` (`#2E4F3E`). Text: parchment. This is where evidence gets *bound* — a single contained panel that makes the case for the corpus.
+
+> Used sparingly — one evidence-block per artefact maximum. If everything is evidence, nothing is.
 
 ### Pricing Anchor ($1,500)
 
-The $1,500 figure is rendered in `display-lg` Cormorant Garamond, graphite, never crossed-out, never with a "save $X" badge, never paired with a countdown timer. Accompanying language must use *anchor*, not *price*. *"The anchor is $1,500."* Tier labels in small caps. No comparison tables that imply CBI is one option among many — CBI sits above the ceiling of what's compared.
+Rendered in `display-lg` Cormorant Garamond on parchment, sumi ink. Never crossed-out. Never with a "save $X" badge. Never paired with a countdown timer. Tier labels in small-caps. *"The anchor is $1,500."* Never *"the price."*
 
 ### CTA — Primary
 
-Rectangular. Solid Ultramarine fill. On-signal text in small caps, 0.18em tracking. 56px height. No border-radius. No shadow. On hover: deepens to `signal-deep`. The CTA is the only place pure Ultramarine functions as a button surface.
+Rectangular. Solid Ultramarine fill. On-signal text in small-caps. 56px height. No border-radius. No shadow. On hover: deepens to `signal-deep`. The only place Ultramarine functions as a button surface.
 
 ### CTA — Ghost
 
-For secondary actions only (e.g., "Read the corpus"). 1px graphite border, parchment fill, graphite text in small caps. On hover: surface-warm fill.
+For secondary actions. Parchment fill. 1px sumi border. Sumi text in small-caps. On hover: tea-stained fill.
 
-### Hairline Rule
+### Seal (Vermilion *Hanko*)
 
-The system's primary section divider. 1px graphite. Always full-width within the content column. Never decorated. Never doubled.
+The Japanese-restraint accent. A 64×64px square, vermilion fill, parchment glyph (initials, year, or "VERIFIED" in small-caps). **One seal per artefact, maximum.** Used as a stamp on archival case-files, verified-quote artefacts, and the bottom of the corpus page. Never on a CTA. Never on a banner. Never recurring. Its power is its scarcity.
 
-### Ornament — Corner Mark
+### Alert Banner
 
-Two 12px orthogonal strokes in Broken Gold. Used *only* on the corpus colophon and proof blocks. Two corners per frame — top-left and bottom-right. Bauhaus-derived, not Art Deco. Restraint, not flourish.
+Oxblood fill (`#6B1F1B`). Parchment text in small-caps. Used for genuine system alerts (form errors, integrity warnings). **Never** for marketing urgency. CBI does not manufacture urgency.
+
+### Hairline Rules
+
+- `hairline-primary` — 1px sumi. Section dividers, table rules, frame edges.
+- `hairline-soft` — 1px stone. Anchor-card top rules, secondary separations.
+
+Always 1px. Never doubled. Never decorated.
 
 ## Voice in Visual
 
 Every visual decision must pass these tests, drawn from `plugins/design/skills/cbi-brand-enforcement.md`:
 
-1. **Lexicon** — Does it use *The Neutralizer*, *Life GPS*, *C.U.E. Method*, *Friction*, *Pressure-breach*, *Sovereign*, *Operator*? Or has it slipped into *the program / coaching / framework / resistance / breakthrough / empowered / client*?
-2. **Tone** — Would Conroy say this? "Sexy-ass Yoda" — wise, precise, a little provocative, never corporate, never apologetic.
-3. **Operator test** — Would an Operator (someone who's done the work and is still stuck) feel seen? Would a Tourist (wants a quick fix, collecting tools) feel invited? If yes to Tourist, revise.
-4. **Premium test** — Does this look like $1,500 anchor value? Or does it look free? "Free-looking" includes: stock wellness photography, gradient blobs, cookie-cutter SaaS layouts, emoji-heavy headlines.
-5. **Friction test** — Does the design *remove* friction or add it? Every unnecessary click, scroll, decision, or visual element is friction. The design serves the message.
+1. **Lexicon.** Does it use *The Neutralizer*, *Life GPS*, *C.U.E. Method*, *Friction*, *Pressure-breach*, *Sovereign*, *Operator*? Or has it slipped into *the program / coaching / framework / resistance / breakthrough / empowered / client*?
+2. **Tone.** Would Conroy say this? "Sexy-ass Yoda" — wise, precise, a little provocative, never corporate, never apologetic.
+3. **Operator test.** Would an Operator (done the work, still stuck) feel seen? Would a Tourist (wants a quick fix, collects tools) feel invited? If yes to Tourist, revise.
+4. **Premium test.** Does this look like $1,500 anchor value? Or does it look free?
+5. **Friction test.** Does the design *remove* friction or add it? Every unnecessary click, scroll, decision, or visual element is friction.
 
 ## Do's and Don'ts
 
 **Do:**
 
 - Lead with the signal. One sentence. Ultramarine.
-- Hold 70% Ma. Generosity of empty space is the signature.
-- Render the corpus numerals (`131 / 1,323 / 63M / 7`) in IBM Plex Mono. The mono lockup is the credential.
-- Use Broken Gold *only* for rails, numerals, and corner ornaments. Never for text.
-- Quote clients verbatim. Attribute by name and credential where consented.
-- Print-test every artifact. If it doesn't render correctly to PDF, it isn't shipping.
+- Hold 70% Ma.
+- Render `131 / 1,323 / 63M / 7` in IBM Plex Mono. The mono lockup is the credential.
+- Use Broken Gold **only** on Roman numerals and corner ornaments.
+- Use Brass on rails (not gold). Use Mahogany on testimonial borders (not gold). Use Library Green on evidence blocks (not gold).
+- Use the Vermilion seal **once per artefact**. Where it appears is the *most-stamped* moment.
+- Quote clients verbatim. Attribute by name and credential.
+- Print-test every artefact.
 
 **Don't:**
 
-- Use gradients of any kind. Ultramarine is a knife, not a fade.
-- Use stock wellness imagery (lotus, sunset, abstract flowing curves, hands raised at sunrise).
-- Use Inter, Roboto, Helvetica, Arial, Open Sans, Space Grotesk, or any sans-serif body face.
+- Use gradients of any kind.
+- Use stock wellness imagery.
+- Use Inter, Roboto, Helvetica, or any of the AI-default sans-serifs.
 - Round corners. Sharp is the default.
 - Use drop shadows, glow, glassmorphism, or any simulated physical depth.
-- Use sparkles, checkmarks, confetti, gradient orbs, or "amazing transformation" energy. CBI is surgery, not cheerleading.
-- Use "navigating," "unlocking," "holistic," "transformative journey," "empower," or any AI-smoothed wellness vocabulary.
-- Reveal pricing before the prospect is qualified by Theo. Pricing belongs to the post-diagnostic page only.
+- Use Broken Gold for rails, borders, hover states, or anything beyond Roman numerals + corner ornaments. Gold doing too many jobs is the Trump-rally aesthetic. *Restraint is the brand.*
+- Use Vermilion more than once per artefact.
+- Pair Ultramarine with Vermilion *as a gradient*. As separate marks on the page, fine. As a fade between, never — that's a flag, not a system.
+- Use sparkles, checkmarks, confetti, gradient orbs, or "amazing transformation" energy.
+- Use "navigating," "unlocking," "holistic," "transformative journey," "empower."
+- Reveal pricing before Theo's diagnostic.
 - Add a single element you can't justify. Strip it.
 
 ## References
 
-- `plugins/design/skills/cbi-brand-enforcement.md` — auto-invoked brand check (lexicon, tone, voice)
-- `docs/positioning/CBI-NARRATIVE-VISUAL-ALIGNMENT.md` — Alessandra → Elara translation: Ultramarine / Broken Gold / Ma in language
-- `docs/positioning/CBI-WHY-CONROY-THE-SUPREME-BRAND.md` — the five reasons no real competition (the Supreme positioning)
-- `docs/positioning/CBI-POSITIONING-MASTER-ARSENAL.md` §06 — the Six Clinical Framework Anchors
-- `.claude/rules/brand.md` — voice and lexicon enforcement
+- `plugins/design/skills/cbi-brand-enforcement.md` — auto-invoked brand check
+- `docs/positioning/CBI-NARRATIVE-VISUAL-ALIGNMENT.md` — Alessandra → Elara translation
+- `docs/positioning/CBI-PHOBIA-VISUAL-EMOTIONAL-ARCHITECTURE.md` — emotional-arc design brief
+- `docs/positioning/CBI-WHY-CONROY-THE-SUPREME-BRAND.md` — Supreme positioning
+- `docs/positioning/CBI-POSITIONING-MASTER-ARSENAL.md` §06 — Six Clinical Framework Anchors
+- `.claude/rules/brand.md` — voice and lexicon
 - `.claude/rules/pricing.md` — $1,500 anchor logic
 - `.claude/rules/friction-scale.md` — 1–20 scale, target 2–3
-- `agents/souls/06-ELARA-THORNE-BROWNE-SOUL.md` — Elara's identity as Sovereign Art Director
-- KB (Sovereign Intelligence) — *The Sovereign FMDA Visual Manifesto* (search `category="identity"`)
-- `docs/plans/brief-01-visual-map/sovereign-map.html` — reference implementation of this DESIGN.md
+- `agents/souls/06-ELARA-THORNE-BROWNE-SOUL.md` — Elara's identity
+- KB: *Document 1 — The Sovereign FMDA Visual Manifesto* (`category: identity`)
+- KB: *Document 2 — Material & Color Protocol* (`category: protocol`)
+- `docs/plans/brief-01-visual-map/sovereign-map.html` — reference implementation
 
 ---
 
-*Authored by Elara Thorne-Browne (Gem 6), Sovereign Art Director, in alignment with Alessandra Moretti-Reyes (Gem 3) on narrative translation. The visual DNA is locked. Subsequent edits require sign-off from Conroy.*
+*Authored by Elara Thorne-Browne (Gem 6), Sovereign Art Director.*
+
+*Version 2.0 — palette expanded from Ultramarine + Gold to the full triangulated FMDA system. Mahogany, Library Green, Vermilion, Brass, Bone, Tea-stained, multiple ink levels. Gold restricted to Roman numerals and corner ornaments. Brass takes the rails. Mahogany takes the testimonial borders. Library Green takes the evidence blocks. Each colour has one job and does it.*
