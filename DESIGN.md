@@ -303,6 +303,12 @@ components:
   hairline-soft:
     backgroundColor: "{colors.stone}"
     height: 1px
+  logo-horizontal:
+    widthRatio: 16
+    heightRatio: 9
+  logo-stacked:
+    widthRatio: 1
+    heightRatio: 1
 ---
 
 ## Overview
@@ -531,6 +537,54 @@ Oxblood fill (`#6B1F1B`). Parchment text in small-caps. Used for genuine system 
 - `hairline-soft` — 1px stone. Anchor-card top rules, secondary separations.
 
 Always 1px. Never doubled. Never decorated.
+
+## Logo
+
+CBI has two approved lockups. Use only these. Do not reconstruct, re-kern, or re-draw either.
+
+### Lockups
+
+**Horizontal lockup** — large CBI mark centred above a single-line wordmark. 16:9 aspect ratio. Source: `assets/logo/cbi-lockup-horizontal.svg`. Use for: web headers, deck title slides, large-format print, email headers, YouTube channel art.
+
+**Stacked lockup** — smaller CBI mark above a two-line wordmark ("CONROY BROWNE / INTERNATIONAL"). 1:1 aspect ratio. Source: `assets/logo/cbi-lockup-stacked.svg`. *(SVG pending — Conroy to drop into `assets/logo/` when available.)* Use for: social avatars, app icons, watermarks, square crops, profile images.
+
+### Clear Space
+
+Minimum clear space on all four sides = the cap-height of the "I" in "CBI" (measured from the approved SVG at any render size). Nothing — text, image, frame edge, competing graphic element — enters that boundary.
+
+### Minimum Sizes
+
+| Lockup | Screen | Print |
+|---|---|---|
+| Horizontal | 240px wide | 30mm wide |
+| Stacked | 96×96px | 18×18mm |
+
+Below minimum size, the lockup becomes illegible. Do not use it smaller — omit it entirely.
+
+### Colour Applications
+
+Five approved applications, in order of preference:
+
+1. **Sumi-on-parchment** (default) — `#1A1613` mark on `#F4EFE6` background. Editorial artefacts, documents, printed materials.
+2. **Parchment-on-Ultramarine** (reverse, primary surfaces) — `#F4EFE6` mark on `#1034A6` background. Signal banners, primary CTA panels, Ultramarine covers.
+3. **Parchment-on-Mahogany** (case-file artefacts) — `#F4EFE6` mark on `#4A2418` background. Testimonial covers, case-study headers, archival print.
+4. **Parchment-on-Library-Green** (evidence panels) — `#F4EFE6` mark on `#2E4F3E` background. Corpus pages, clinical-validation panels, evidence blocks.
+5. **Parchment-on-Sumi** (dark-mode artefacts) — `#F4EFE6` mark on `#1A1613` background. Digital dark mode, video lower-thirds, nightmode documents.
+
+No other colour combinations are permitted.
+
+### Forbidden
+
+- Stretching or distorting either lockup
+- Recolouring outside the five approved applications above
+- Drop shadows, glow, emboss, or outline applied to the mark or wordmark
+- Placing either lockup on busy photography or a patterned background
+- Gradient fills on the mark or wordmark
+- Outlining the type within the wordmark
+- Recreating the wordmark from any cut of Bodoni other than the locked SVG file
+- Placing the stacked lockup where minimum size cannot be met — use the horizontal or omit
+
+---
 
 ## Voice in Visual
 
