@@ -2,16 +2,10 @@
 name: Sovereign FMDA — Conroy Browne International
 colors:
   # ──────────────────────────────────────────────────────────────
-  # SPEC ALIASES (canonical agent-readable keys)
-  # ──────────────────────────────────────────────────────────────
-  primary: "#1034A6"          # → signal (Ultramarine)
-  secondary: "#4A2418"        # → mahogany (Dark Academia leather)
-  tertiary: "#2E4F3E"         # → library-green (Caribbean-colonial)
-  neutral: "#F4EFE6"          # → parchment
-
-  # ──────────────────────────────────────────────────────────────
   # 1 · CARIBBEAN-BRONX SIGNAL — one Ultramarine, no fade.
+  # primary = signal. Required canonical key for agent colour generation.
   # ──────────────────────────────────────────────────────────────
+  primary: "#1034A6"          # = signal (Ultramarine). Canonical agent key — do not use in components, use signal.
   signal: "#1034A6"           # Ultramarine Blue. The signal that cuts.
   signal-deep: "#0A2378"      # Hover/active state for primary CTAs only.
   on-signal: "#F4EFE6"        # Parchment text on Ultramarine fill.
@@ -20,9 +14,7 @@ colors:
   # 2 · DARK ACADEMIA — the library palette. Leather, ink, oxblood.
   # ──────────────────────────────────────────────────────────────
   mahogany: "#4A2418"         # Library-leather. Testimonial borders, case-file blocks.
-  oxblood: "#6B1F1B"          # Editorial accent for serious, stamped artefacts.
   library-green: "#2E4F3E"    # Penguin Classic / billiard-cloth green. Evidence blocks.
-  library-green-soft: "#3F6151"
 
   # ──────────────────────────────────────────────────────────────
   # 3 · JAPANESE RESTRAINT — sumi ink, vermilion seal, paper.
@@ -265,7 +257,7 @@ components:
     textColor: "{colors.charcoal}"
     typography: "{typography.small-caps}"
   cta-primary:
-    backgroundColor: "{colors.signal}"
+    backgroundColor: "{colors.primary}"
     textColor: "{colors.on-signal}"
     typography: "{typography.small-caps}"
     rounded: "{rounded.none}"
@@ -303,12 +295,6 @@ components:
   hairline-soft:
     backgroundColor: "{colors.stone}"
     height: 1px
-  logo-horizontal:
-    widthRatio: 16
-    heightRatio: 9
-  logo-stacked:
-    widthRatio: 1
-    heightRatio: 1
 ---
 
 ## Overview
